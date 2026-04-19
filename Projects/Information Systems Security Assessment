@@ -1,1 +1,148 @@
+# FinSecure Corp – Access Control & Security Operations Assessment
 
+## 🧠 Overview
+This project analyzes a simulated enterprise environment (FinSecure Corp) to identify weaknesses in access control, operational security, and system monitoring practices.
+
+The assessment focuses on:
+- Role-Based Access Control (RBAC)
+- Access control policy gaps
+- Operational security weaknesses
+- Threat identification from system logs
+- Security control recommendations aligned with NIST standards
+
+---
+
+## 🏢 Environment Description
+The environment includes:
+- Enterprise user access matrix
+- Access control policies
+- Operational security practices
+- System logs (48-hour excerpt)
+
+---
+
+## 🔐 Access Control Analysis (RBAC)
+
+The organization implements a Role-Based Access Control (RBAC) model, where permissions are assigned based on job roles.
+
+However, several critical misconfigurations were identified:
+
+### Key Issues
+- **Excessive Privileges**
+  - Junior System Admin granted Domain Admin access
+- **Privilege Inconsistency**
+  - Customer Support Rep with access to Payroll systems
+- **Account Lifecycle Failure**
+  - Terminated employee account still active
+- **Separation of Duties Violation**
+  - IT Admin with full access to all systems
+
+These issues violate core security principles such as least privilege and separation of duties :contentReference[oaicite:0]{index=0}.
+
+---
+
+## ⚠️ Access Control Policy Weaknesses
+
+Several policy-level gaps were identified:
+
+### 1. Shared Accounts
+- Prevent attribution of actions (breaks non-repudiation)
+- Weakens audit trails
+
+### 2. Overly Broad VPN Access
+- VPN access granted to all users by default
+- Expands attack surface unnecessarily
+
+### 3. Unrestricted Log Access
+- Logs contain sensitive data (IP addresses, activity)
+- Broad access creates risk of tampering or data exposure
+
+These findings are directly supported by the policy excerpt :contentReference[oaicite:1]{index=1}.
+
+---
+
+## 🛠️ Operational Security Weaknesses
+
+### 1. No Change Management Process
+- No ticketing requirement
+- No approval workflow
+- No post-change review
+
+➡️ Risk: Unauthorized or untracked system changes
+
+---
+
+### 2. Poor Asset Management
+- No inventory tracking system
+- No lifecycle tracking (issue/return)
+
+➡️ Risk: Lost devices, lack of visibility during incidents
+
+---
+
+### 3. No Device Sanitization Process
+- No wiping/reimaging procedure
+
+➡️ Risk: Data leakage from reused devices
+
+---
+
+## 🚨 Threat Analysis (System Logs)
+
+### 1. Brute Force Attack
+- Multiple failed logins followed by success
+- Same external IP
+
+➡️ Indicates credential compromise attempt
+
+---
+
+### 2. Privilege Escalation
+- User manually granted Domain Admin privileges
+
+➡️ Possible insider threat or misconfiguration
+
+---
+
+### 3. Malware Infection (RAT)
+- Host infected with **GhostX RAT**
+
+➡️ Enables remote control, data exfiltration, lateral movement
+
+---
+
+## 🛡️ Security Recommendations
+
+### Access Control
+- Enforce RBAC strictly (no direct user permissions)
+- Implement least privilege (AC-6)
+- Remove excessive admin privileges
+
+### Authentication
+- Enable Multi-Factor Authentication (MFA)
+- Implement account lockout policies
+
+### Monitoring & Logging
+- Restrict log access to authorized personnel
+- Monitor privileged account usage
+
+### Operational Security
+- Implement formal change management process
+- Deploy asset tracking system
+- Enforce device sanitization procedures
+
+---
+
+## 📚 Framework Alignment
+This assessment aligns with:
+- NIST SP 800-53 (AC-2, AC-6, IA-2, SI-4)
+- NIST Risk Management Framework (RMF)
+
+---
+
+## 💡 Key Takeaways
+This project demonstrates:
+- Ability to analyze enterprise access control systems
+- Understanding of RBAC and security principles
+- Threat identification using real log data
+- Application of NIST security controls to real scenarios
