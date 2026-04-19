@@ -12,7 +12,7 @@ Cybersecurity student with CompTIA A+, Network+, Security+. Focused on digital f
 ## Featured Projects
 - [OPNsense VLAN Segmentation Lab](./labs/proxmox-opnsense-lab)
 - [Digital Forensics SSD Analysis](./projects/digital-forensics)
-- [Information Systems Security Assesment](./projects/network-security)
+- [Information Systems Security Assesment](./projects/information-systems-security)
 
 ## Homelab
 
