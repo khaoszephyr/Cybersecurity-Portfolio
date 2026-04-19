@@ -1,6 +1,6 @@
 # FinSecure Corp – Access Control & Security Operations Assessment
 
-## 🧠 Overview
+## Overview
 This project analyzes a simulated enterprise environment (FinSecure Corp) to identify weaknesses in access control, operational security, and system monitoring practices.
 
 The assessment focuses on:
@@ -12,7 +12,7 @@ The assessment focuses on:
 
 ---
 
-## 🏢 Environment Description
+## Environment Description
 The environment includes:
 - Enterprise user access matrix
 - Access control policies
@@ -21,7 +21,7 @@ The environment includes:
 
 ---
 
-## 🔐 Access Control Analysis (RBAC)
+## Access Control Analysis (RBAC)
 
 The organization implements a Role-Based Access Control (RBAC) model, where permissions are assigned based on job roles.
 
@@ -41,7 +41,7 @@ These issues violate core security principles such as least privilege and separa
 
 ---
 
-## ⚠️ Access Control Policy Weaknesses
+## Access Control Policy Weaknesses
 
 Several policy-level gaps were identified:
 
@@ -61,14 +61,14 @@ These findings are directly supported by the policy excerpt :contentReference[oa
 
 ---
 
-## 🛠️ Operational Security Weaknesses
+## Operational Security Weaknesses
 
 ### 1. No Change Management Process
 - No ticketing requirement
 - No approval workflow
 - No post-change review
 
-➡️ Risk: Unauthorized or untracked system changes
+Risk: Unauthorized or untracked system changes
 
 ---
 
@@ -76,42 +76,42 @@ These findings are directly supported by the policy excerpt :contentReference[oa
 - No inventory tracking system
 - No lifecycle tracking (issue/return)
 
-➡️ Risk: Lost devices, lack of visibility during incidents
+Risk: Lost devices, lack of visibility during incidents
 
 ---
 
 ### 3. No Device Sanitization Process
 - No wiping/reimaging procedure
 
-➡️ Risk: Data leakage from reused devices
+Risk: Data leakage from reused devices
 
 ---
 
-## 🚨 Threat Analysis (System Logs)
+## Threat Analysis (System Logs)
 
 ### 1. Brute Force Attack
 - Multiple failed logins followed by success
 - Same external IP
 
-➡️ Indicates credential compromise attempt
+Indicates credential compromise attempt
 
 ---
 
 ### 2. Privilege Escalation
 - User manually granted Domain Admin privileges
 
-➡️ Possible insider threat or misconfiguration
+Possible insider threat or misconfiguration
 
 ---
 
 ### 3. Malware Infection (RAT)
 - Host infected with **GhostX RAT**
 
-➡️ Enables remote control, data exfiltration, lateral movement
+Enables remote control, data exfiltration, lateral movement
 
 ---
 
-## 🛡️ Security Recommendations
+## Security Recommendations
 
 ### Access Control
 - Enforce RBAC strictly (no direct user permissions)
@@ -133,14 +133,14 @@ These findings are directly supported by the policy excerpt :contentReference[oa
 
 ---
 
-## 📚 Framework Alignment
+## Framework Alignment
 This assessment aligns with:
 - NIST SP 800-53 (AC-2, AC-6, IA-2, SI-4)
 - NIST Risk Management Framework (RMF)
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 This project demonstrates:
 - Ability to analyze enterprise access control systems
 - Understanding of RBAC and security principles
